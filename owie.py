@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, send_file
 import wikipedia
-import functools,operator,re,os,io,sys,time
+import functools,operator,re,os,io,sys,time,random
+import imgurreddit
 from google.cloud import vision
 #from radar import RadarClient
 
@@ -43,18 +44,6 @@ def gen():
     image = vision.types.Image(content=content)
     response = client.label_detection(image=image)
     labels = response.label_annotations
-    print('Labels:')
-    
-    if "Photography" in labels:
-        labels.del("Photography")
-    if "Portrait" in labels:
-        labels.del("Photography")
-    if "Illustration" in labels:
-        labels.del("Photography")
-        
-    
-    for label in labels:
-        print(label.description)
         
 
     if response.error.message:
@@ -62,10 +51,27 @@ def gen():
             '{}\nFor more info on error messages, check: '
             'https://cloud.google.com/apis/design/errors'.format(
                 response.error.message))    
+                
+    print('Labels:')
+    
+        
+    for label in labels:
+        if label.description in ["Illustration","Portrait","Photography"]:
+            labels.remove(label)
+        print(label.description)
+        
+    choose = random.choice(labels)
+    str
+    caption = "yung bruh really think they can have "+str(choose.description)+" at "+str(lat)+", "+str(lng)+"?????????"
+    print(caption)
 
+    link = imgurreddit.imgur()
+    imgurreddit.reddit(link,caption)
     
+    imgurreddit.tts(caption)
+    os.system("omxplayer speak.mp3")
     
-    return "succcess"
+    return caption
 
 
 if __name__ == "__main__":
