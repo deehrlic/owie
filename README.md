@@ -2,6 +2,10 @@
 
 https://devpost.com/software/owie/edit
 
+USAGE:
+
+Run owie.py and then click the button that shows up on http://localhost:5000
+
 FILE PURPOSES:
 
 openuipath/ - uipath files for starting the automation that starts the second uipath
