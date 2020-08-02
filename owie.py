@@ -3,10 +3,10 @@ import wikipedia
 import functools,operator,re,os,io,sys,time,random
 import imgurreddit
 from google.cloud import vision
-#from radar import RadarClient
+from radar import RadarClient
 
 
-#radar = RadarClient("prj_live_sk_5ec7432841dec7376548dc61e7fb6c395e4729d5")
+radar = RadarClient("API_KEY")
 
 
 app = Flask(__name__)
@@ -24,12 +24,11 @@ def gen():
     mul = functools.reduce(operator.add,total)
     ttl = (mul%10)+1
 
-    #geo = radar.geocode.ip(ip='67.180.229.63')
-    #print(geo.latitude)
-    #lat = re.findall('.*\.',str(geo.latitude))[0][:-1]
-    #lng = re.findall('.*\.',str(geo.longitude))[0][:-1]
-    lat = 37
-    lng = -122
+    geo = radar.geocode.ip(ip='67.180.229.63')
+    print(geo.latitude)
+    lat = re.findall('.*\.',str(geo.latitude))[0][:-1]
+    lng = re.findall('.*\.',str(geo.longitude))[0][:-1]
+   
 
     print(lat,lng)
     
