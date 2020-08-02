@@ -1,0 +1,113 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="444,591" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:uasb="clr-namespace:UiPath.Activities.System.Binding;assembly=UiPath.System.Activities" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Activities.System.Binding</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence sap:VirtualizedContainerService.HintSize="454,526" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="ue:IWorkbookQuickHandle" Default="[new WorkbookQuickHandle(workbookPath:=&quot;Excel_Workspace.xlsx&quot;,visible:=True,autoSave:=False,createNew:=True,readOnly:=False,isWorkspace:=True)]" Name="Excel" />
+      <Variable x:TypeArguments="uasb:BindingsRepository" Default="[new UiPath.Activities.System.Binding.BindingsRepository()]" Name="Saved" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:ApplicationCard DisplayName="Application Card " sap:VirtualizedContainerService.HintSize="412,436" sap2010:WorkflowViewState.IdRef="ApplicationCard_1">
+      <uix:ApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,225" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:Click DelayAfter="300" DelayBefore="200" DisplayName="Click 'Run'" sap:VirtualizedContainerService.HintSize="358,135" sap2010:WorkflowViewState.IdRef="Click_1">
+              <uix:Click.Target>
+                <uix:TargetAnchorable ClippingRegion="1629, 191, 55, 75" DesignTimeRectangle="1629, 191, 55, 75" FriendlyName="'Run'" FullSelector="&lt;wnd app='bdcam.exe' cls='TARGETRECT'/&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADcAAABLCAYAAADUOx/8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHuSURBVHhe7da/S8NAFMDx/k/5UwKOjiWEdhEiOIl/gJMG/wEHHVwUIg5icYnSxSnpIjgIuhghLt2eeWmvXO1Zapt3dznf8IWm74Z++tIfnfF4DK7GuLb2f3DD4XBu2IaWvWbG2RzjsHVxR+kpfHx9KmfUkeO2zncguDyAh5cn5ZwyLTjRyeMZjN6fleco0orDdm8O4Xp0rzzbdNpxIh1bNIbDqLdoFCei2qIVOIxii9bgRE1u0Toc1tQWrcSJNt2i1Thsky0yDjOBc/K2dPYLxcmfAmd/xJ38+0WxLTljOKptyWnHUW9LTitOx7bktOC2L/bgKrtTzikjx+3fHsNr8aacUUeOMxnjMMZZFuMwxlkW4zDGWRYxLoHI88CTihLVOZo04HyI8+l1ElXACJKFczTpxdXXAqeaievp4xjfjMnG/Tifnls9rbg89sHzY8gVs0VchYqSyWzNjWvASZ858WJns2W432arp3FzOcS+/IXiFK4qj8Gf3V4/sPWt12Zc1dznrgaJWzaSzrYCZzbGYYyzLMZhjPtDWZZBGIbQ7XZnBUEAaZoqz6+T0c0hsNfr1TCENgnDjOIwBPb7/cZhmHEcVhSF8vlNswJHFeMwxlkW4zDGWdbKONdiXFtjXFtzGzcYDMDVOmVZgpuV8A26xazABgeKTgAAAABJRU5ErkJggg==" SelectionType="Region" Selector="&lt;wnd app='bdcam.exe' cls='TARGETRECT'/&gt;" Text="Run">
+                  <uix:TargetAnchorable.SearchMethods>
+                    <scg:List x:TypeArguments="uix:TargetSearchMethod" Capacity="8">
+                      <uix:TargetSearchMethod SearchStep="Selector" />
+                      <uix:TargetSearchMethod SearchStep="PartialSelector" />
+                      <uix:TargetSearchMethod SearchStep="Image" />
+                      <uix:TargetSearchMethod SearchStep="TextNative" />
+                      <uix:TargetSearchMethod SearchStep="TextOcr" />
+                    </scg:List>
+                  </uix:TargetAnchorable.SearchMethods>
+                </uix:TargetAnchorable>
+              </uix:Click.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:Click>
+          </Sequence>
+        </ActivityAction>
+      </uix:ApplicationCard.Body>
+      <uix:ApplicationCard.TargetApp>
+        <uix:TargetApp FilePath="C:\Program Files (x86)\Bandicam\bdcam.exe" InformativeScreenshot="a660ff83311c3082f129199061d97733.png" Selector="&lt;wnd app='bdcam.exe' cls='TARGETRECT'/&gt;" />
+      </uix:ApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:ApplicationCard>
+  </Sequence>
+</Activity>
