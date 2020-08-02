@@ -3,8 +3,8 @@ from imgurpython import ImgurClient
 from google.cloud import texttospeech
 
 def imgur():
-    client_id = "9c5e85230d3df52"
-    client_secret = "3d722b8f08385aef8ebb92c284457325ecb15347"
+    client_id = "client_id"
+    client_secret = "client_secret"
 
     client = ImgurClient(client_id,client_secret)
 
@@ -13,11 +13,11 @@ def imgur():
     return response["link"]
 
 def reddit(link,caption):
-    reddit = praw.Reddit(client_id="DHIiBuNzG_WkAQ",
-                         client_secret="og2LS94QeZ45FBweeuE_RHVa1eg",
+    reddit = praw.Reddit(client_id="client_id",
+                         client_secret="secret",
                          user_agent="For posting recorded videos of a chair falling apart to a custom subreddit.",
-                         username="owiehack",
-                         password="drewee602")
+                         username="username",
+                         password="password")
 
     subreddit = reddit.subreddit("owiehack")
     subreddit.submit(title=caption,url=str(link[:-1]))
